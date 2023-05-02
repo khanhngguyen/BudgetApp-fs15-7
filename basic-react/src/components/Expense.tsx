@@ -3,7 +3,7 @@ import Props from '../types/Props'
 
 interface ExpenseProps extends Props {
     balance: number
-    handleBalance: (input: string, from: string) => void
+    handleBalance: (input: string, from: string, to: string) => void
 }
 
 const Expense = (props: ExpenseProps) => {
@@ -62,7 +62,7 @@ const Expense = (props: ExpenseProps) => {
             onChange={e => setDate(new Date(e.target.value))}
             />
             <button onClick={() => {
-                props.handleBalance(amount, 'expense');
+                props.handleBalance(amount, 'balance', 'expense' );
                 showExpense();
             }}>Add expense</button>
             <div>

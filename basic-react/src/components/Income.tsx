@@ -3,7 +3,7 @@ import Props from '../types/Props'
 
 interface IncomeProps extends Props {
     balance: number
-    handleBalance: (input: string, from: string) => void
+    handleBalance: (input: string, from: string, to: string) => void
 }
 
 const Income = (props: IncomeProps) => {
@@ -50,7 +50,7 @@ const Income = (props: IncomeProps) => {
             onChange={e => setDate(new Date(e.target.value))}
             />
             <button onClick={() => {
-                props.handleBalance(amount, 'income');
+                props.handleBalance(amount, 'income', 'balance');
                 showIncome();
                 }}>Add income</button>
             <div>

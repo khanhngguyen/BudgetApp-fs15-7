@@ -26,7 +26,7 @@ const Saving = (props: SavingProps) => {
             >Reset target</button>
             <div id='target'>Target: {target}</div>
             <div>Current saving: {props.saving}</div>
-            <div>Progress: </div>
+            <div>Progress: {(props.saving / parseInt(target)) * 100}%</div>
         </div>
     )
 }
