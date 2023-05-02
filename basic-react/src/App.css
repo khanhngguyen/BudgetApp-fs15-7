@@ -1,8 +1,42 @@
 .App {
-  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
+.Wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 5rem auto;
+  padding: 0 5rem;
+}
+
+.Input {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.Balance {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.Wrapper--balance {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+button {
+  width: auto;
+  max-width: fit-content;
+  margin-top: 5px;
+}
+
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -35,4 +69,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
