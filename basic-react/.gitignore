@@ -23,3 +23,9 @@ yarn-debug.log*
 yarn-error.log*
 package-lock.json
 yarn.lock
+package.json
+
+App.test.tsx
+react-app-env.d.ts
+react-app-env.d.ts
+setupTests.ts
