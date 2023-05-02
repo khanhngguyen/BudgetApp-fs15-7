@@ -6,14 +6,25 @@
 .Wrapper {
   display: flex;
   justify-content: space-evenly;
-  margin: 5rem auto;
+  margin: 5rem auto 1rem;
   padding: 0 5rem;
 }
 
 .Input {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   gap: 5px;
+  max-width: 15rem;
+}
+
+.Input ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.Input ul li {
+  padding: 5px;
 }
 
 .Balance {

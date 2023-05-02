@@ -1,21 +1,34 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-const Saving = () => {
-  return (
-    <div className='Input'>
-        <p>Saving</p>
-        <label htmlFor='saving-target'>Saving target:</label>
-        <input
-        type='text'
-        name='saving-target'
-        id='saving-target'
-        />
-        <button>Reset target</button>
-        <div>Target: </div>
-        <div>Current saving: </div>
-        <div>Progress: </div>
-    </div>
-  )
+interface SavingProps {
+    saving: number
+}
+const Saving = (props: SavingProps) => {
+    const [target, setTarget] = useState('0');
+    
+    const handleResetTarget = () => {
+        setTarget('0');
+    }
+
+    return (
+        <div className='Input'>
+            <div>Saving</div>
+            <label htmlFor='saving-target'>Saving target:</label>
+            <input
+            type='text'
+            name='saving-target'
+            id='saving-target'
+            value={target}
+            onChange={e => setTarget(e.target.value)}
+            />
+            <button
+            onClick={handleResetTarget}
+            >Reset target</button>
+            <div id='target'>Target: {target}</div>
+            <div>Current saving: {props.saving}</div>
+            <div>Progress: </div>
+        </div>
+    )
 }
 
 export default Saving
