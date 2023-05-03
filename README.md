@@ -30,3 +30,16 @@ Be creative with your style!
 ---
 
 ![demo3](demo3.png)
+
+## Result
+![result demo](./result1.png)
+Demo with inputs
+![result demo with input](./result2.png)
+Demo of conditional input, e.g: income amount can't be negative
+![result demo with input & conditions](./result3.png)
+Another example: input must be a number
+![result demo with input & conditions](./result4.png)
+Other condition example: can't make expense that is larger than current balance
+![result demo with conditions](./result5.png)
+Another condition example: can't transfer a saving amount that is larger than current balance
+![result demo with conditions](./result6.png)
