@@ -32,6 +32,7 @@ Be creative with your style!
 ![demo3](demo3.png)
 
 ## Result
+[Live demo can be found here](https://khanhngguyen.github.io/fs15_7-budget-app/)
 ![result demo](./result1.png)
 Demo with inputs
 ![result demo with input](./result2.png)
