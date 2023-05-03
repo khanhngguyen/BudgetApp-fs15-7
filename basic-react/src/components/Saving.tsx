@@ -4,7 +4,14 @@ interface SavingProps {
     saving: number
 }
 const Saving = (props: SavingProps) => {
-    const [target, setTarget] = useState('0');
+    const [target, setTarget] = useState('1000');
+
+    const handleSetTarget = (input: string) => {
+        const value = parseInt(input);
+        if (isNaN(value)) {
+            alert('Please type in a number');
+        }
+    }
     
     const handleResetTarget = () => {
         setTarget('0');
@@ -19,7 +26,10 @@ const Saving = (props: SavingProps) => {
             name='saving-target'
             id='saving-target'
             value={target}
-            onChange={e => setTarget(e.target.value)}
+            onChange={e => {
+                handleSetTarget(e.target.value);
+                setTarget(e.target.value);
+            }}
             />
             <button
             onClick={handleResetTarget}
@@ -27,6 +37,7 @@ const Saving = (props: SavingProps) => {
             <div id='target'>Target: {target}</div>
             <div>Current saving: {props.saving}</div>
             <div>Progress: {(props.saving / parseInt(target)) * 100}%</div>
+            <progress value={props.saving} max={parseInt(target)}></progress>
         </div>
     )
 }

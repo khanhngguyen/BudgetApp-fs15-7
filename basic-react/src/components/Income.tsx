@@ -16,10 +16,14 @@ const Income = (props: IncomeProps) => {
     }
 
     const showIncome = () => {
-        const item = document.createElement('li');
-        const dateStr = date.toLocaleDateString('en-US');
-        item.innerText = `Income from ${source}, amount: ${amount}€, from ${dateStr}`;
-        document.querySelector('#income-list')?.appendChild(item);
+        const value = parseInt(amount);
+        //income amount must be a number & > 0
+        if (!isNaN(value) && value > 0) {
+            const item = document.createElement('li');
+            const dateStr = date.toLocaleDateString('en-US');
+            item.innerText = `Income from ${source}, amount: ${amount}€, from ${dateStr}`;
+            document.querySelector('#income-list')?.appendChild(item);
+        } else return;
     }
 
     return (

@@ -17,10 +17,14 @@ const Expense = (props: ExpenseProps) => {
     }
     
     const showExpense = () => {
-        const item = document.createElement('li');
-        const dateStr = date.toLocaleDateString('en-US');
-        item.innerText = `Expense from ${source} ${extra ? extra : ''}, amount: ${amount}€, from ${dateStr}`;
-        document.querySelector('#expense-list')?.appendChild(item);
+        const value = parseInt(amount);
+        //expense amount must be a number & not larger than balance
+        if (!isNaN(value) && value < props.balance) {
+            const item = document.createElement('li');
+            const dateStr = date.toLocaleDateString('en-US');
+            item.innerText = `Expense from ${source} ${extra ? extra : ''}, amount: ${amount}€, from ${dateStr}`;
+            document.querySelector('#expense-list')?.appendChild(item);
+        }
     }
 
     return (

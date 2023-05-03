@@ -53,9 +53,6 @@ function App() {
     }
   }
 
-  // const handleSaving = (input: string) => {
-  // }
-
   return (
     <div className='App'>
       <div className='Wrapper'>
